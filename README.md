@@ -77,15 +77,12 @@ These instructions use `samitrop_input` as the path for the input data files and
 
 1. Download and unzip `exams.zip` file and the `exams.csv` file in the [SaMi-Trop dataset](https://zenodo.org/records/4905618).
 
-2. Download and unzip the Chagas labels, i.e., the [`samitrop_chagas_labels.csv`](https://physionetchallenges.org/2025/data/samitrop_chagas_labels.zip) file.
+2. Convert the SaMi-Trop dataset to WFDB format, with the available demographics information and Chagas labels in the WFDB header file, by running
 
-3. Convert the SaMi-Trop dataset to WFDB format, with the available demographics information and Chagas labels in the WFDB header file, by running
-
-        `python prepare_samitrop_data.py \
-            -i /home/work/hdd3/yubo10/sami_trop/exams.hdf5 \
-            -d /home/work/hdd3/yubo10/sami_trop/exams.csv \
-            -l /home/work/hdd3/yubo10/sami_trop/samitrop_chagas_labels.csv \
-            -o /home/work/hdd3/yubo10/sami_trop/samitrop_output`
+        python prepare_samitrop_data.py \
+            -i samitrop_input/exams.hdf5 \
+            -d samitrop_input/exams.csv \
+            -o samitrop_output
 
 #### PTB-XL dataset
 
@@ -93,7 +90,7 @@ These instructions use `ptbxl_input` as the path for the input data files and `p
 
 1. Download and, if necessary, unzip the [PTB-XL dataset](https://physionet.org/content/ptb-xl/).
 
-2. Update the WFDB files with the available demographics information and Chagas labels  by running
+2. Update the WFDB files with the available demographics information and Chagas labels by running
 
         python prepare_ptbxl_data.py \
             -i /home/work/hdd3/yubo10/ptb-xl/1.0.3/records500 \
