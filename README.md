@@ -1,4 +1,4 @@
-# Python example code for the George B. Moody PhysioNet Challenge 2025
+# Python code for the George B. Moody PhysioNet Challenge 2025
 
 ## What's in this repository?
 
@@ -93,9 +93,9 @@ These instructions use `ptbxl_input` as the path for the input data files and `p
 2. Update the WFDB files with the available demographics information and Chagas labels by running
 
         python prepare_ptbxl_data.py \
-            -i ptbxl_input/records500/ \
-            -d ptbxl_input/ptbxl_database.csv \
-            -o ptbxl_output
+            -i /home/work/hdd3/yubo10/ptb-xl/1.0.3/records500 \
+            -d /home/work/hdd3/yubo10/ptb-xl/1.0.3/ptbxl_database.csv \
+            -o /home/work/hdd3/yubo10/ptb-xl/ptbxl_output
 
 ## Which scripts I can edit?
 
